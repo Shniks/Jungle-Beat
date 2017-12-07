@@ -38,6 +38,12 @@ def test_list_count
   assert_equal "doop deep", list.to_string
 end
 
+def test_list_append
+  list = LinkedList.new
+  list.append('plop')
+  assert_equal "plop", list.to_string
+end
+
 def test_list_append_more
   list = LinkedList.new
   list.append('doop')
@@ -65,7 +71,16 @@ def test_converts_list_to_string
   assert_equal 'doop deep plop suu', list.to_string
 end
 
-def test_list_prepend
+def test_list_prepend_one
+  list = LinkedList.new
+  list.append('plop')
+  list.append('suu')
+  list.prepend('dop')
+  assert_equal "dop plop suu", list.to_string
+  assert_nil nil, list.head.data
+end
+
+def test_list_prepend_more
   list = LinkedList.new
   list.append('plop')
   list.append('suu')
