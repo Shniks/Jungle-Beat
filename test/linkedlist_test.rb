@@ -16,7 +16,29 @@ def test_head_returns_nil
   assert_nil nil, list.head
 end
 
-def test_list_append
+def test_list_appends_word_doop
+  list = LinkedList.new
+  list.append('doop')
+  assert_equal "doop", list.to_string
+  assert_nil list.head.next_node
+end
+
+def test_list_appends_word_deep
+  list = LinkedList.new
+  list.append('deep')
+  assert_equal "deep", list.to_string
+  assert_nil list.head.next_node
+end
+
+def test_list_count
+  list = LinkedList.new
+  list.append('doop')
+  list.append('deep')
+  assert_equal 2, list.count
+  assert_equal "doop deep", list.to_string
+end
+
+def test_list_append_more
   list = LinkedList.new
   list.append('doop')
   list.append('deep')

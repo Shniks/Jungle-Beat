@@ -27,6 +27,8 @@ def play
   puts " "
   puts "Wow #{voice}! You sound amazing! So much pain in your voice..."
   `say -r #{tempo} -v #{voice} #{list.to_string}`
+  puts " "
+  puts " "
 end
 
 
