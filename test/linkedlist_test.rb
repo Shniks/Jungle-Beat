@@ -110,7 +110,9 @@ def test_finds_snips
   list.append('meow')
   list.append('blotch')
   list.append('grrf')
+  list.find(3,1)
   list.find(1, 3)
+  assert_equal "blotch", list.find(3, 1)
   assert_equal "suu meow blotch", list.find(1, 3)
 end
 
